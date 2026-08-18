@@ -12,6 +12,8 @@ export const siteConfig = {
   /** Your name — used as the signature on letters and the poem. */
   yourName: "Hosana",
 
+  yourEmail: 'aveze96@gmail.com',
+
   /** His birthday, used for the countdown/date-tag on the welcome page. ISO format. */
   birthday: "2004-08-18",
 
