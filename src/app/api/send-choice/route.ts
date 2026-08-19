@@ -2,10 +2,19 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { siteConfig } from '../../../config/site.config';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+
 
 export async function POST(request: NextRequest) {
   try {
+
+    if (!process.env.RESEND_API_KEY) {
+      console.error('Email send error: RESEND_API_KEY is not set');
+      return NextResponse.json(
+        { ok: false, error: 'Email sending is not configured' },
+        { status: 500 }
+      );
+    }
+
     const body = await request.json();
     const { email, dateTitle, dateDescription, isCustom } = body;
 
@@ -16,6 +25,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const { data, error } = await resend.emails.send({
       from: process.env.FROM_EMAIL || 'Birthday <noreply@yourdomain.com>',
       to: [process.env.TO_EMAIL || siteConfig.yourEmail],

@@ -23,24 +23,6 @@
   --font-hand: "Homemade Apple", cursive;
 }
 
-@theme inline {
-  --color-cream: var(--color-cream);
-  --color-cream-deep: var(--color-cream-deep);
-  --color-paper: var(--color-paper);
-  --color-paper-soft: var(--color-paper-soft);
-  --color-ink: var(--color-ink);
-  --color-ink-soft: var(--color-ink-soft);
-  --color-gold: var(--color-gold);
-  --color-gold-deep: var(--color-gold-deep);
-  --color-wine: var(--color-wine);
-  --color-highlight: var(--color-highlight);
-  --color-line: var(--color-line);
-
-  --font-display: var(--font-display);
-  --font-body: var(--font-body);
-  --font-hand: var(--font-hand);
-}
-
 * {
   box-sizing: border-box;
 }

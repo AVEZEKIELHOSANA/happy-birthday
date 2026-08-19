@@ -79,7 +79,7 @@ export function EmailView() {
             Your email
           </label>
           <p className="mb-3.5 text-sm text-ink-soft">
-            So I can reply to you personally and tell you when we&rsquo;re making this happen.
+            So I can reply to you personally .
           </p>
           <input
             id="email"
